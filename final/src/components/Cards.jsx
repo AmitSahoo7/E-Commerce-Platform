@@ -1,5 +1,4 @@
 import React from "react";
-// learning to import components
 
 import Carousel from "./Carousel";
 import Carousel_3 from "./Carousel_3";

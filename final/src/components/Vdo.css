@@ -30,6 +30,12 @@
   cursor: pointer;
   font-size: 1rem;
   margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.appointment-button:hover {
+  background-color: gray;
+  transform: scale(1.05);
 }
 
 .play-pause-button_vdo {
@@ -46,12 +52,15 @@
   position: absolute;
   bottom: 20px;
   left: 20px;
+  transition: transform 0.3s ease;
 }
 
 .button_vdo:hover {
   background-color: transparent;
+  transform: scale(1.1);
 }
 
+/* Playful circular icon */
 .circle-icon_vdo {
   width: 40px;
   height: 40px;
@@ -61,4 +70,11 @@
   justify-content: center;
   align-items: center;
   color: black;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.circle-icon_vdo:hover {
+  background-color: lightgray;
+  transform: rotate(20deg) scale(1.15);
 }

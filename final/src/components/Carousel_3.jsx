@@ -80,8 +80,9 @@ const Carousel_3 = () => {
     <div className="carousel3-wrapper">
       <div className="carousel3-navigation">
         <button
-          className={`carousel3-slick-prev ${currentIndex === 0 ? "disabled" : ""
-            }`}
+          className={`carousel3-slick-prev ${
+            currentIndex === 0 ? "disabled" : ""
+          }`}
           onClick={handlePrev}
           disabled={currentIndex === 0}
         >
@@ -90,8 +91,9 @@ const Carousel_3 = () => {
         </button>
         <span className="carousel3-text">new & trending for fall</span>
         <button
-          className={`carousel3-slick-next ${currentIndex >= slides.length - 3 ? "disabled" : ""
-            }`}
+          className={`carousel3-slick-next ${
+            currentIndex >= slides.length - 3 ? "disabled" : ""
+          }`}
           onClick={handleNext}
           disabled={currentIndex >= slides.length - 3}
         >
@@ -102,18 +104,12 @@ const Carousel_3 = () => {
       <div className="carousel3-slider-container">
         <Slider ref={sliderRef} {...settings}>
           {slides.map((slide, index) => (
-            <a href="#" key={index}>
-              <Link to="/add-product">
-                <div className="carousel3-slide">
-                  <img
-                    src={slide.image}
-                    alt={`Slide ${index}`}
-                    className="carousel3-slide-image"
-                  />
-                  <p className="carousel3-slide-text">{slide.text}</p>
-                </div>
-              </Link>
-            </a>
+            <Link to="/add-product" key={index}>
+              <div className="carousel3-slide">
+                <img src={slide.image} alt={`Slide ${index}`} />
+                <p className="carousel3-slide-text">{slide.text}</p>
+              </div>
+            </Link>
           ))}
         </Slider>
       </div>

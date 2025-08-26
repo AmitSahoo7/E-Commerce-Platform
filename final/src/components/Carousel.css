@@ -1,35 +1,39 @@
 .slider-container {
   margin: 20px auto;
   width: 100%;
-  /* max-width: 800px; */
   position: relative;
 }
 
 .slide {
   position: relative;
   width: 100%;
-  /* height: 100vh; */
 }
 
 .carousel-image {
   width: 100%;
-  /* height: 100vh; */
   object-fit: cover;
+  transition: transform 0.5s ease, opacity 0.5s ease; /* smooth image transition */
 }
+
+
 
 .carousel-overlay {
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%); /* center overlay properly */
   color: white;
   text-align: center;
+  transition: opacity 0.3s ease-in-out; /* fade overlay effect */
 }
 
 .carousel-overlay h1 {
   font-size: 2rem;
   margin-bottom: 20px;
+  transition: color 0.3s ease-in-out;
 }
 
+/* Primary Button Style */
 .btn_1 {
   background-color: black;
   color: white;
@@ -37,12 +41,15 @@
   padding: 10px 20px;
   cursor: pointer;
   font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn_1:hover {
   background-color: gray;
+  transform: scale(1.05); /* subtle hover effect */
 }
 
+/* Transparent Button */
 .button_1 {
   background-color: transparent;
   border: none;
@@ -51,12 +58,15 @@
   position: absolute;
   bottom: 20px;
   left: 20px;
+  transition: transform 0.3s ease;
 }
 
 .button_1:hover {
   background-color: transparent;
+  transform: scale(1.1); /* slight zoom */
 }
 
+/* Play/Pause Button */
 .play-pause-button {
   position: absolute;
   bottom: 20px;
@@ -72,4 +82,10 @@
   justify-content: center;
   align-items: center;
   color: black;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.circle-icon:hover {
+  background-color: lightgray;
+  transform: rotate(20deg) scale(1.15);
 }

@@ -3,8 +3,6 @@
     margin: auto;
     position: relative;
     background-image: url("https://thumb.ac-illust.com/85/85219efa7a16e939f2880634d83dea35_t.jpeg");
-
-
 }
 
 .carousel3-navigation {
@@ -13,7 +11,6 @@
     align-items: center;
     margin-bottom: 20px;
     margin-top: 60px;
-
 }
 
 .carousel3-slick-next,
@@ -55,13 +52,25 @@
 
 .carousel3-slide {
     padding: 10px;
-    /* background-image: url("https://thumb.ac-illust.com/85/85219efa7a16e939f2880634d83dea35_t.jpeg"); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Keeps zoomed image inside */
 }
 
 .carousel3-slide img {
     display: block;
     width: 100%;
     height: 600px;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto;
+    transition: transform 0.5s ease-in-out; /* Smooth zoom effect */
+}
+
+.carousel3-slide img:hover {
+    transform: scale(1.08); /* Zoom on hover */
 }
 
 .carousel3-slide-text {
